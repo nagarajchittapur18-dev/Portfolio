@@ -145,6 +145,8 @@ const Hero = () => {
           <motion.a
             href={PERSONAL_INFO.resume}
             download="Nagaraj_Chitapur_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group flex items-center justify-center gap-2 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-semibold text-sm sm:text-base shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-300"
             whileHover={{ scale: 1.04, y: -2 }}
             whileTap={{ scale: 0.96 }}

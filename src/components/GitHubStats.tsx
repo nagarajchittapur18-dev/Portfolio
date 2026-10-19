@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiGitCommit, FiStar, FiExternalLink } from "react-icons/fi";
+import { GitHubCalendar } from "react-github-calendar";
 import { GITHUB_USERNAME, PERSONAL_INFO } from "../constants";
 import { fadeIn, staggerContainer, scaleIn } from "../utils/animations";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
@@ -125,6 +126,41 @@ const GitHubStats = () => {
               />
             </div>
           </motion.div>
+        </motion.div>
+
+        {/* GitHub Contribution Calendar Heatmap */}
+        <motion.div
+          variants={fadeIn("up", 0.25)}
+          initial="hidden"
+          animate={isInView ? "show" : "hidden"}
+          className="p-1 rounded-2xl bg-gradient-to-r from-emerald-500/20 via-indigo-500/20 to-purple-500/20 mb-6 sm:mb-8 shadow-sm"
+        >
+          <div className="rounded-xl overflow-hidden bg-white dark:bg-[#0f172a] p-4 sm:p-6 border border-slate-200/80 dark:border-white/5">
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <div className="flex items-center gap-2">
+                <FiGitCommit className="text-emerald-600 dark:text-emerald-400 flex-shrink-0" size={18} />
+                <h3 className="text-theme-title text-sm sm:text-base font-bold">
+                  GitHub Contribution Heatmap
+                </h3>
+              </div>
+              <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">
+                Past Year Activity
+              </span>
+            </div>
+
+            <div className="overflow-x-auto py-2 scrollbar-hide flex justify-start sm:justify-center text-slate-700 dark:text-slate-200">
+              <div className="min-w-fit">
+                <GitHubCalendar
+                  username={GITHUB_USERNAME}
+                  colorScheme={isDark ? "dark" : "light"}
+                  blockSize={13}
+                  blockMargin={4}
+                  blockRadius={3}
+                  fontSize={12}
+                />
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Contribution Graph Activity */}
