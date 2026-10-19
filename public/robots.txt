@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nagarajchittapur.vercel.app/sitemap.xml
