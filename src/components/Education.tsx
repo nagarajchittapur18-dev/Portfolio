@@ -11,7 +11,7 @@ const Education = () => {
     <section id="education" className="py-20 sm:py-28 bg-slate-50 dark:bg-[#030712] relative overflow-hidden transition-colors duration-300">
       <div className="absolute bottom-0 left-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           ref={ref}
@@ -22,7 +22,7 @@ const Education = () => {
         >
           <motion.span
             variants={fadeIn("up", 0)}
-            className="inline-block px-3 py-1 rounded-full bg-indigo-500/10 dark:bg-indigo-500/15 border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-xs mb-3"
+            className="inline-block px-3.5 py-1 rounded-full bg-indigo-500/10 dark:bg-indigo-500/15 border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-xs mb-3 shadow-sm"
           >
             Academic Foundation
           </motion.span>
@@ -71,8 +71,8 @@ const Education = () => {
                 </div>
 
                 {/* Card */}
-                <div className="flex-1 p-5 sm:p-7 rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200/90 dark:border-white/10 shadow-sm hover:shadow-xl hover:border-indigo-400/40 transition-all duration-300">
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <div className="flex-1 p-6 sm:p-7 md:p-8 rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200/90 dark:border-white/10 shadow-sm hover:shadow-xl hover:border-indigo-400/40 transition-all duration-300">
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
                     <span className="px-3 py-1 rounded-full text-xs font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200 dark:border-indigo-500/20">
                       {edu.institution}
                     </span>
@@ -82,11 +82,11 @@ const Education = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-theme-title font-extrabold text-base sm:text-xl mb-1">
+                  <h3 className="text-theme-title font-extrabold text-base sm:text-xl md:text-2xl mb-2">
                     {edu.degree}
                   </h3>
 
-                  <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 dark:text-slate-400 mb-3">
+                  <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 dark:text-slate-400 mb-3.5">
                     <span className="flex items-center gap-1">
                       <FiMapPin size={12} />
                       {edu.location}
@@ -97,7 +97,7 @@ const Education = () => {
                     </span>
                   </div>
 
-                  <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">
                     {edu.description}
                   </p>
                 </div>

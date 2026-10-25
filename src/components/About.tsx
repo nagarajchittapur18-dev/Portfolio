@@ -21,7 +21,7 @@ const About = () => {
       <div className="absolute top-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           ref={ref}
@@ -52,7 +52,7 @@ const About = () => {
         </motion.div>
 
         {/* Clean 2-Column Layout: Photo on Left, Small Introduction on Right */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-center">
+        <div className="grid md:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Photo Column (5 cols) */}
           <motion.div
             variants={fadeIn("right", 0.2)}
@@ -60,7 +60,7 @@ const About = () => {
             animate={isInView ? "show" : "hidden"}
             className="md:col-span-5 flex justify-center"
           >
-            <div className="relative group max-w-xs sm:max-w-sm w-full">
+            <div className="relative group max-w-sm w-full">
               {/* Outer decorative gradient glow */}
               <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
 
